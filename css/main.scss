@@ -1,0 +1,187 @@
+/*funciones scss*/
+
+$colors: ( primary: #e96985, secundary: #fff, terciary: #403E3E);
+@function color($nombreColor) {
+    @return map-get($colors, $nombreColor)
+}
+
+$escritorio: 801px;
+$mediumScrean: 800px;
+$smal: 570px;
+@mixin smal {
+    @media (max-width: #{$smal}) {
+        @content;
+    }
+}
+
+@mixin mediumScrean {
+    @media (max-width: #{$mediumScrean}) {
+        @content;
+    }
+}
+
+@mixin escritorio {
+    @media (min-width: #{$escritorio}) {
+        @content;
+    }
+}
+
+$margin: .7em 0;
+$padding: .6em 0;
+$letter-spacing: 5px;
+li {
+    a {
+        margin: 0.4em;
+        padding: 0.4em;
+        text-align: left;
+        text-decoration: none;
+        color: inherit;
+        font-size: 14px;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:hover {
+    background-color: color(primary);
+    color: color(secundary);
+    border-radius: 8px;
+    opacity: 1;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 13px;
+    margin: 0;
+    header {
+        display: grid;
+        grid-template-columns: 2;
+        grid-row: 1;
+        gap: 10px;
+        .logo {
+            grid-column: 1/2;
+            margin: auto;
+        }
+        .navegacion {
+            grid-column: 2/2;
+            margin: auto;
+            .menu {
+                .menu-icon i {
+                    font-size: 1.7em;
+                }
+                ul {
+                    @include smal {
+                        display: inline;
+                        text-align: center;
+                        border-radius: 2px;
+                        margin-left: 0;
+                    }
+                }
+                li {
+                    @include smal {
+                        line-height: 10px;
+                        display: inline-block;
+                    }
+                    @include mediumScrean {
+                        display: inline;
+                        margin-top: 1em;
+                        text-align: left;
+                    }
+                    @include escritorio {
+                        margin-top: 1em;
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+    .explore {
+        background-color: color(primary);
+        margin-bottom: 2em;
+        .title {
+            padding-top: 1.5em;
+            color: color(secundary);
+            text-align: center;
+            letter-spacing: 3px;
+            font-size: 20px;
+            @include mediumScrean {
+                letter-spacing: 5px;
+                font-size: 28px;
+            }
+            @include escritorio {
+                letter-spacing: 7px;
+                font-size: 40px;
+            }
+        }
+        p {
+            padding-top: .5em;
+            color: color(secundary);
+            margin: 0 5em 0;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .boton-work {
+            text-align: center;
+            width: auto;
+            margin-top: 2em;
+            padding-bottom: 3em;
+            button {
+                padding: 10px;
+                text-transform: uppercase;
+                border-radius: 10px;
+                box-shadow: 1px 2px 3px rgba(255, 0, 0, 0);
+                border: 1px solid color(primary);
+            }
+        }
+    }
+    .fotos {
+        // @include smal {
+        //     margin: 1em .1em;
+        // }
+        @include mediumScrean {
+            margin: 2em 4em;
+        }
+        @include escritorio {
+            margin: 2em 20em;
+        }
+        .grid {
+            display: grid;
+            @include mediumScrean {
+                grid-template-columns: repeat(2, 2fr);
+            }
+            @include escritorio {
+                grid-template-columns: repeat(3, 2fr);
+            }
+            .grid-item {
+                text-align: center;
+                padding: 10px;
+            }
+        }
+    }
+    .footer {
+        text-align: center;
+        width: auto;
+        .rights {
+            font-size: 12px;
+        }
+        .social {
+            text-align: center;
+            width: auto;
+            margin: 2em 0;
+            i {
+                margin: 0 .1em;
+                padding: 0 .3em;
+                color: grey;
+                text-shadow: 1px 1px 1px #ccc;
+                font-size: 1.5em;
+            }
+        }
+    }
+    @include escritorio {
+        a {
+            font-size: 18px;
+        }
+    }
+}

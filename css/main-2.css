@@ -1,0 +1,23 @@
+.menu-dos {
+  margin-top: 3em;
+}
+
+.menu-dos a {
+  text-decoration: none;
+}
+
+.menu-dos ul {
+  list-style-type: none;
+  text-align: center;
+  width: auto;
+  padding: 0.4em;
+  margin: 0.4em;
+}
+
+.menu-dos li {
+  display: inline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main-2.css.map */
