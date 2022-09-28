@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pruebas con sass </title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./assets/1.jpeg
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+
+    <!-- <script type="text/javascript" src="js/fotos.json"></script> -->
+    <script type="text/javascript" src="js/sneak-creative.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#menu-principal").addClass("menu");
+            //$("#menu-secundario").load("navigation.html");
+            $("#menu-secundario").addClass("menu-dos");
+
+            const li = '<li><a href="#">Buscar</a></li>';
+            $("#list").find("#menu-principal").append(li);
+        });
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <figure class="logo">
+            <img src="assets/logo.png" width="70%" alt="logo">
+        </figure>
+        <div class="navegacion">
+            <nav id="menu-principal">
+                <ul id="list">
+                    <li>
+                        <a href="#">All</a>
+                    </li>
+                    <li>
+                        <a href="#">Web</a>
+                    </li>
+                    <li>
+                        <a href="#">Photo</a>
+                    </li>
+                    <li>
+                        <a href="#">Branding</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="explore">
+            <h1 class="title">EXPLORE BEYOND HORIZON</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi hic, dicta neque? </p>
+            <div class="boton-work">
+                <button>View our work</button>
+            </div>
+        </div>
+
+        <div class="second-menu">
+            <nav id="menu-secundario"></nav>
+        </div>
+
+        <section class="fotos">
+            <div class="gridPics"></div>
+        </section>
+
+        <footer class="footer">
+            <div class="social">
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-google"></i>
+            </div>
+            <div class="rights">
+                <p>&copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    <span id="sneak">Sneak</span> All Rights Reserved
+                </p>
+            </div>
+        </footer>
+
+    </main>
+    
+  
+
+
+</body>
+
+</html>
