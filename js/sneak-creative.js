@@ -1,5 +1,3 @@
-const pics = document.querySelector('#fotos'); 
-
 eventosListener();
 
 function eventosListener() {
@@ -29,9 +27,6 @@ function showPics({data}) {
     data.forEach(element => {
  
         const {name, desc} = element;
-        
-        const div = document.createElement('div');
-        div.classList.add('grid-item');
 
         const imagen = document.createElement('img');
 
