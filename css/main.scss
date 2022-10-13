@@ -134,7 +134,12 @@ body {
                 box-shadow: 1px 2px 3px rgba(255, 0, 0, 0);
                 border: 1px solid color(primary);
             }
+            button:hover{
+                background-color: color(primary);
+                color: color(secundary);
+            }
         }
+        
     }
     .fotos {
         // @include smal {
